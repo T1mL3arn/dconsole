@@ -101,6 +101,7 @@ class DConsole {
 		
 		// create console interface
 		this.interfc = interfc;
+		interfc.console = this;
 		interfc.init();
 		
 		commands = new DCCommands(this);
@@ -303,7 +304,6 @@ class DConsole {
 		interfc.hideProfiler();
 	}
 
-	
 	public function prevHistory() {
 		_historyIndex--;
 		
